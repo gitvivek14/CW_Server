@@ -59,3 +59,10 @@ app.use("/api/shop/review", shopReviewRouter);
 app.use("/api/common/feature", commonFeatureRouter);
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
+
+app.get('/',(req,res)=>{
+  return res.json({
+      success:true,
+      message:'Welcome to the SERVER User ->  Validation with Zod 👊',
+  })
+})
